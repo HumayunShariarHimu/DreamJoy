@@ -1,0 +1,68 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: lime;
+}
+
+.container {
+    height: 99vh;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+.container span {
+    color: red;
+}
+
+.container span::after {
+    content: '|';
+    animation-name: blinking;
+    animation-duration: 0.71s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinking {
+    from {
+        color: red;
+    }
+    to {
+        color: lime;
+    }
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    background-color: black;
+    color: lime;
+    border: 1px solid lime;
+    padding: 10px 20px;
+    font-family: monospace;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.controls button:hover {
+    background-color: lime;
+    color: black;
+}
+
+.controls button:active {
+    background-color: red;
+    color: black;
+}
